@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PNM Library</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        overflow: hidden;
+        background-color: rgb(254, 253, 253);
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; height: 100vh; width: 100%">
+      <div>
+        <img
+          src="assets/img/background_login.jpeg"
+          alt=""
+          style="
+            height: 100vh;
+            width: 40vw;
+            background-size: contain;
+            background-position: center;
+          "
+        />
+      </div>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          background-image: url('assets/img/book_pattern.jpeg');
+          background-blend-mode: multiply;
+          background-color: rgba(0, 0, 0, 0.2);
+        "
+      >
+        <div
+          style="
+            background-color: white;
+            padding-inline: 40px;
+            padding-block: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <div style="font-size: 30px; margin-bottom: 40px; text-align: center">
+            <h1 style="color: darkslategray">PNM Library</h1>
+            <p style="font-size: 20px; color: darkslategray">Login Form</p>
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 20px">
+            <input
+              type="email"
+              placeholder="Email"
+              required
+              style="
+                width: 100%;
+                height: 30px;
+                font-size: 20px;
+                padding: 20px;
+                border: none;
+                border-bottom: 2px solid #ccc;
+              "
+              onmouseover="this.style.borderBottom = '2px solid brown'"
+              onmouseout="this.style.borderBottom = '2px solid #ccc'"
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              required
+              style="
+                width: 100%;
+                height: 30px;
+                font-size: 20px;
+                padding: 20px;
+                border: none;
+                border-bottom: 2px solid #ccc;
+              "
+              onmouseover="this.style.borderBottom = '2px solid brown'"
+              onmouseout="this.style.borderBottom = '2px solid #ccc'"
+            />
+            <a href="pengajuan.html">
+              <button
+                style="
+                  width: 100%;
+                  font-size: 20px;
+                  padding: 20px;
+                  border-radius: 5px;
+                  border: none;
+                  margin-top: 20px;
+                  cursor: pointer;
+                  background-color: brown;
+                  color: white;
+                "
+              >
+                Login
+              </button>
+            </a>
+          </div>
+          <div>
+            <p style="text-align: center; margin-top: 20px">
+              <a
+                href="lupa_password.html"
+                style="text-decoration: none; color: brown"
+                >Lupa Password</a
+              >
+            </p>
+          </div>
+          <div>
+            <hr />
+            <p style="text-align: center; margin-top: 20px">
+              Don't have an account?
+              <a
+                href="register.html"
+                style="text-decoration: none; color: brown"
+                >Register</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
