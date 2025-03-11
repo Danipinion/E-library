@@ -15,6 +15,8 @@
         background-color: rgb(254, 253, 253);
       }
     </style>
+    <!-- Tambahkan script reCAPTCHA dari Google -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body>
     <div style="display: flex; height: 100vh; width: 100%">
@@ -54,95 +56,112 @@
             <h1 style="color: darkslategray">E-Library</h1>
             <p style="font-size: 20px; color: darkslategray">Register Form</p>
           </div>
-          <div style="display: flex; flex-direction: column; gap: 20px">
-            <input
-              type="text"
-              placeholder="Nama Lengkap"
-              style="
-                width: 100%;
-                height: 30px;
-                font-size: 20px;
-                padding: 20px;
-                border: none;
-                border-bottom: 2px solid #ccc;
-              "
-              onmouseover="this.style.borderBottom = '2px solid brown'"
-              onmouseout="this.style.borderBottom = '2px solid #ccc'"
-            />
-            <input
-              type="number"
-              placeholder="NIM"
-              style="
-                width: 100%;
-                height: 30px;
-                font-size: 20px;
-                padding: 20px;
-                border: none;
-                border-bottom: 2px solid #ccc;
-              "
-              onmouseover="this.style.borderBottom = '2px solid brown'"
-              onmouseout="this.style.borderBottom = '2px solid #ccc'"
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              style="
-                width: 100%;
-                height: 30px;
-                font-size: 20px;
-                padding: 20px;
-                border: none;
-                border-bottom: 2px solid #ccc;
-              "
-              onmouseover="this.style.borderBottom = '2px solid brown'"
-              onmouseout="this.style.borderBottom = '2px solid #ccc'"
-            />
-            <input
-              type="password"
-              placeholder="Password"
-              style="
-                width: 100%;
-                height: 30px;
-                font-size: 20px;
-                padding: 20px;
-                border: none;
-                border-bottom: 2px solid #ccc;
-              "
-              onmouseover="this.style.borderBottom = '2px solid brown'"
-              onmouseout="this.style.borderBottom = '2px solid #ccc'"
-            />
-            <input
-              type="password"
-              placeholder="Confirm Password"
-              style="
-                width: 100%;
-                height: 30px;
-                font-size: 20px;
-                padding: 20px;
-                border: none;
-                border-bottom: 2px solid #ccc;
-              "
-              onmouseover="this.style.borderBottom = '2px solid brown'"
-              onmouseout="this.style.borderBottom = '2px solid #ccc'"
-            />
-            <a href="login.html">
-              <button
+          <form action="proses_daftar.php" method="POST">
+            <div style="display: flex; flex-direction: column; gap: 20px">
+              <input
+                type="text"
+                name="nama"
+                placeholder="Nama Lengkap"
+                required
                 style="
                   width: 100%;
+                  height: 30px;
                   font-size: 20px;
                   padding: 20px;
-                  border-radius: 5px;
                   border: none;
-                  background-color: brown;
-                  margin-top: 20px;
+                  border-bottom: 2px solid #ccc;
+                "
+                onmouseover="this.style.borderBottom = '2px solid brown'"
+                onmouseout="this.style.borderBottom = '2px solid #ccc'"
+              />
+              <input
+                type="number"
+                name="nim"
+                placeholder="NIM"
+                required
+                style="
+                  width: 100%;
+                  height: 30px;
+                  font-size: 20px;
+                  padding: 20px;
+                  border: none;
+                  border-bottom: 2px solid #ccc;
+                "
+                onmouseover="this.style.borderBottom = '2px solid brown'"
+                onmouseout="this.style.borderBottom = '2px solid #ccc'"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email"
+                required
+                style="
+                  width: 100%;
+                  height: 30px;
+                  font-size: 20px;
+                  padding: 20px;
+                  border: none;
+                  border-bottom: 2px solid #ccc;
+                "
+                onmouseover="this.style.borderBottom = '2px solid brown'"
+                onmouseout="this.style.borderBottom = '2px solid #ccc'"
+              />
+              <input
+                type="password"
+                name="password"
+                placeholder="Password"
+                required
+                style="
+                  width: 100%;
+                  height: 30px;
+                  font-size: 20px;
+                  padding: 20px;
+                  border: none;
+                  border-bottom: 2px solid #ccc;
+                "
+                onmouseover="this.style.borderBottom = '2px solid brown'"
+                onmouseout="this.style.borderBottom = '2px solid #ccc'"
+              />
+              <input
+                type="password"
+                name="confirm_password"
+                placeholder="Confirm Password"
+                required
+                style="
+                  width: 100%;
+                  height: 30px;
+                  font-size: 20px;
+                  padding: 20px;
+                  border: none;
+                  border-bottom: 2px solid #ccc;
+                "
+                onmouseover="this.style.borderBottom = '2px solid brown'"
+                onmouseout="this.style.borderBottom = '2px solid #ccc'"
+              />
+
+              <!-- reCAPTCHA -->
+              <div class="g-recaptcha" data-sitekey="YOUR_RECAPTCHA_SITE_KEY"></div>
+              
+              <!-- Tombol Daftar dengan Gambar -->
+              <button
+                type="submit"
+                style="
+                  width: 100%;
+                  background: none;
+                  border: none;
                   cursor: pointer;
-                  color: white;
+                  margin-top: 20px;
                 "
               >
-                Daftar
+                <img
+                  src="assets/img/google_signup.png"
+                  alt="Daftar dengan Google"
+                  style="width: 100%; max-width: 250px"
+                />
               </button>
-            </a>
-          </div>
+            </div>
+          </form>
+
           <div>
             <hr />
             <p style="text-align: center; margin-top: 20px">
