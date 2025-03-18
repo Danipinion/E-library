@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>PNM Library</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
       * {
         margin: 0;
@@ -20,7 +21,7 @@
     <div style="display: flex; height: 100vh; width: 100%">
       <div>
         <img
-          src="assets/img/background_login.jpeg"
+          src="/assets/img/background_login.jpeg"
           alt=""
           style="
             height: 100vh;
@@ -85,7 +86,12 @@
               onmouseover="this.style.borderBottom = '2px solid brown'"
               onmouseout="this.style.borderBottom = '2px solid #ccc'"
             />
-            <a href="pengajuan.html">
+            <div
+              class="g-recaptcha"
+              style="margin-inline: auto"
+              data-sitekey="6LcSrPAqAAAAAMejKJE7O-qfwsQ8qHQsiRbyXbJ2"
+            ></div>
+            <a href="/pages/dashboard.html">
               <button
                 style="
                   width: 100%;
@@ -93,9 +99,9 @@
                   padding: 20px;
                   border-radius: 5px;
                   border: none;
-                  margin-top: 20px;
+                  margin-top: 5px;
                   cursor: pointer;
-                  background-color: brown;
+                  background-color: chocolate;
                   color: white;
                 "
               >

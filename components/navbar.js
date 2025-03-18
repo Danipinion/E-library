@@ -90,7 +90,7 @@ navbarCustomTemplate.innerHTML = `
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="/pages/auth/login.html"
                       class="block px-4 py-2 text-sm hover:bg-gray-100 "
                       role="menuitem"
                       >Keluar</a
