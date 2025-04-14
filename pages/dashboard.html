@@ -1,252 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard | e-library</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
-      rel="stylesheet"
-    />
-    <style type="text/tailwindcss">
-      @theme {
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | e-library</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="stylesheet" />
+  <style type="text/tailwindcss">
+    @theme {
         --color-clifford: #da373d;
       }
     </style>
-  </head>
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-  <body>
-    <div id="nav-custom"></div>
-    <div id="sidebar-custom"></div>
+    <style>
+  /* CSS untuk responsivitas sidebar */
+  @media (max-width: 767px) {
+    #sidebar-custom.translate-x-0~.p-4 {
+      margin-left: 0;
+    }
+  }
 
-    <div class="p-4 mt-16 sm:ml-64">
-      <div class="p-4">
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
-          <div
-            class="flex flex-col items-center bg-[#AD7866] border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl text-white"
-          >
-            <div>
-              <svg
-                class="w-24 h-24 text-gray-800 dark:text-white"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M6 2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 1 0 0-2h-2v-2h2a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2h-8v16h5v2H7a1 1 0 1 1 0-2h1V2H6Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <div class="flex flex-col justify-between p-4 leading-normal">
-              <h5
-                class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white"
-              >
-                Judul Buku
-              </h5>
-              <p class="mb-3 text-xl text-gray-700 dark:text-white font-bold">
-                10
-              </p>
-            </div>
-          </div>
-          <div
-            class="flex flex-col items-center bg-[#AD7866] border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl"
-          >
-            <div>
-              <svg
-                class="w-24 h-24 text-gray-800 dark:text-white"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M12.268 6A2 2 0 0 0 14 9h1v1a2 2 0 0 0 3.04 1.708l-.311 1.496a1 1 0 0 1-.979.796H8.605l.208 1H16a3 3 0 1 1-2.83 2h-2.34a3 3 0 1 1-4.009-1.76L4.686 5H4a1 1 0 0 1 0-2h1.5a1 1 0 0 1 .979.796L6.939 6h5.329Z"
-                />
-                <path
-                  d="M18 4a1 1 0 1 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 1 0 2 0V8h2a1 1 0 1 0 0-2h-2V4Z"
-                />
-              </svg>
-            </div>
-            <div class="flex flex-col justify-between p-4 leading-normal">
-              <h5
-                class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white"
-              >
-                Peminjaman Hari Ini
-              </h5>
-              <p class="mb-3 text-xl text-gray-700 dark:text-white font-bold">
-                10
-              </p>
-            </div>
-          </div>
-          <div
-            class="flex flex-col items-center bg-[#AD7866] border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl"
-          >
-            <div>
-              <svg
-                class="w-24 h-24 text-gray-800 dark:text-white"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M5.024 3.783A1 1 0 0 1 6 3h12a1 1 0 0 1 .976.783L20.802 12h-4.244a1.99 1.99 0 0 0-1.824 1.205 2.978 2.978 0 0 1-5.468 0A1.991 1.991 0 0 0 7.442 12H3.198l1.826-8.217ZM3 14v5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5h-4.43a4.978 4.978 0 0 1-9.14 0H3Zm5-7a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1Zm0 2a1 1 0 0 0 0 2h8a1 1 0 1 0 0-2H8Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </div>
-            <div class="flex flex-col justify-between p-4 leading-normal">
-              <h5
-                class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white"
-              >
-                Buku Kembali Hari Ini
-              </h5>
-              <p class="mb-3 text-xl text-gray-700 dark:text-white font-bold">
-                10
-              </p>
-            </div>
-          </div>
-        </div>
+  @media (min-width: 768px) {
+    #sidebar-custom {
+      transform: translateX(0) !important;
+    }
+  }
+</style>
+</head>
+<link rel="stylesheet" href="/assets/css/styles.css" />
 
+<body>
+  <!-- Bilah Navigasi dengan Ikon Toggle -->
+  <div id="nav-custom" class="fixed top-0 left-0 w-full bg-gray-800 text-white p-4 flex justify-between items-center z-50">
+    <div class="text-2xl font-bold">E-Library</div>
+    <button id="toggle-sidebar" class="focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Sidebar -->
+  <div id="sidebar-custom"
+    class="fixed top-16 left-0 w-64 h-full bg-gray-800 text-white transform -translate-x-full transition-transform duration-300 md:translate-x-0">
+    <div class="p-4 text-2xl font-bold">E-Library</div>
+    <nav class="flex-1">
+      <ul>
+        <li class="px-4 py-2 hover:bg-gray-700 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 10h11M9 21V3m4 18h8m-4-4v4m0-10v4" />
+          </svg>
+          Dashboard
+        </li>
+        <li class="px-4 py-2 hover:bg-gray-700 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+          Koleksi Buku
+        </li>
+        <li class="px-4 py-2 hover:bg-gray-700 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Pengaturan
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="p-4 mt-16 sm:ml-64">
+    <div class="p-4">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4">
         <div
-          class="flex items-center justify-start mb-4 rounded-sm bg-[#AD7866]"
-        >
-          <div class="w-full bg-[#AD7866] rounded-lg shadow-sm p-4 md:p-6">
-            <div
-              class="flex justify-between border-gray-200 border-b dark:border-gray-700 pb-3"
-            >
-              <dl>
-                <dt class="text-base font-normal text-white pb-1">
-                  Peminjaman
-                </dt>
-                <dd
-                  class="leading-none text-3xl font-bold text-gray-900 dark:text-white"
-                >
-                  100
-                </dd>
-              </dl>
-              <div>
-                <span
-                  class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-green-900 dark:text-green-300"
-                >
-                  <svg
-                    class="w-2.5 h-2.5 me-1.5"
-                    aria-hidden="true"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 10 14"
-                  >
-                    <path
-                      stroke="currentColor"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 13V1m0 0L1 5m4-4 4 4"
-                    />
-                  </svg>
-                  Rating Peminjaman 23.5%
-                </span>
+          class="flex flex-col items-center bg-[#AD7866] border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl text-white">
+          <div>
+            <svg class="w-24 h-24 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd"
+                d="M6 2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 1 0 0-2h-2v-2h2a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2h-8v16h5v2H7a1 1 0 1 1 0-2h1V2H6Z"
+                clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">
+              Judul Buku
+            </h5>
+            <p class="mb-3 text-xl text-gray-700 dark:text-white font-bold">
+              10
+            </p>
+          </div>
+          <!-- Ganti bagian di dalam kartu pertama -->
+<div class="flex flex-col items-center bg-[#AD7866] border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl text-white">
+  <div>
+    <svg class="w-24 h-24 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+      width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+      <path fill-rule="evenodd"
+        d="M6 2a2 2 0 0 0-2 2v15a3 3 0 0 0 3 3h12a1 1 0 1 0 0-2h-2v-2h2a1 1 0 0 0 1-1V4a2 2 0 0 0-2-2h-8v16h5v2H7a1 1 0 1 1 0-2h1V2H6Z"
+        clip-rule="evenodd" />
+    </svg>
+  </div>
+  <div class="flex flex-col justify-between p-4 leading-normal">
+    <h5 class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">
+      Judul Buku
+    </h5>
+    <p class="mb-3 text-xl text-gray-700 dark:text-white font-bold">
+      10
+    </p>
+  </div>
+</div>
+                <ul>
+                  <li class="px-4 py-2 hover:bg-gray-700 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 10h11M9 21V3m4 18h8m-4-4v4m0-10v4" />
+                    </svg>
+                    Dashboard
+                  </li>
+                  <li class="px-4 py-2 hover:bg-gray-700 flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24"
+                      stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                    Koleksi Buku
+                  </li>
+                </ul>
+              </nav>
+                  Pengaturan
+                </button>
               </div>
             </div>
-
-            <div class="grid grid-cols-2 py-3">
-              <dl>
-                <dt class="text-base font-normal text-white pb-1">
-                  Peminjaman
-                </dt>
-                <dd
-                  class="leading-none text-xl font-bold text-green-500 dark:text-green-400"
-                >
-                  50
-                </dd>
-              </dl>
-              <dl>
-                <dt class="text-base font-normal text-white pb-1">
-                  Pengembalian
-                </dt>
-                <dd
-                  class="leading-none text-xl font-bold text-red-600 dark:text-red-500"
-                >
-                  50
-                </dd>
-              </dl>
-            </div>
-
-            <div id="bar-chart"></div>
           </div>
-        </div>
 
+        </div>
         <div
-          class="flex items-center justify-start mb-4 rounded-sm bg-[#AD7866]"
-        >
-          <div class="container mx-auto p-4">
-            <h1 class="text-3xl font-bold mb-4 text-center text-gray-50">
-              Leaderboard Buku Terlaris
-            </h1>
-            <table
-              class="w-full text-gray-50 bg-[#AD7866] shadow-md rounded-lg"
-            >
-              <thead>
-                <tr class="border-b border-gray-200">
-                  <th class="py-2 px-4 text-left">Peringkat</th>
-                  <th class="py-2 px-4 text-left">Judul Buku</th>
-                  <th class="py-2 px-4 text-left">Penulis</th>
-                  <th class="py-2 px-4 text-left">Jumlah Peminjaman</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="border-b border-gray-200">
-                  <td class="py-2 px-4">1</td>
-                  <td class="py-2 px-4">Laskar Pelangi</td>
-                  <td class="py-2 px-4">Andrea Hirata</td>
-                  <td class="py-2 px-4">150</td>
-                </tr>
-                <tr class="border-b border-gray-200">
-                  <td class="py-2 px-4">2</td>
-                  <td class="py-2 px-4">Bumi Manusia</td>
-                  <td class="py-2 px-4">Pramoedya Ananta Toer</td>
-                  <td class="py-2 px-4">120</td>
-                </tr>
-                <tr class="border-b border-gray-200">
-                  <td class="py-2 px-4">3</td>
-                  <td class="py-2 px-4">Negeri 5 Menara</td>
-                  <td class="py-2 px-4">Ahmad Fuadi</td>
-                  <td class="py-2 px-4">100</td>
-                </tr>
-                <tr class="border-b border-gray-200">
-                  <td class="py-2 px-4">4</td>
-                  <td class="py-2 px-4">Ayat-Ayat Cinta</td>
-                  <td class="py-2 px-4">Habiburrahman El Shirazy</td>
-                  <td class="py-2 px-4">90</td>
-                </tr>
-                <tr class="border-b border-gray-200">
-                  <td class="py-2 px-4">5</td>
-                  <td class="py-2 px-4">Perahu Kertas</td>
-                  <td class="py-2 px-4">Dewi Lestari</td>
-                  <td class="py-2 px-4">80</td>
-                </tr>
-              </tbody>
-            </table>
+          class="flex flex-col items-center bg-[#AD7866] border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl">
+          <div>
+            <svg class="w-24 h-24 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path
+                d="M12.268 6A2 2 0 0 0 14 9h1v1a2 2 0 0 0 3.04 1.708l-.311 1.496a1 1 0 0 1-.979.796H8.605l.208 1H16a3 3 0 1 1-2.83 2h-2.34a3 3 0 1 1-4.009-1.76L4.686 5H4a1 1 0 0 1 0-2h1.5a1 1 0 0 1 .979.796L6.939 6h5.329Z" />
+              <path d="M18 4a1 1 0 1 0-2 0v2h-2a1 1 0 1 0 0 2h2v2a1 1 0 1 0 2 0V8h2a1 1 0 1 0 0-2h-2V4Z" />
+            </svg>
+          </div>
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">
+              Peminjaman Hari Ini
+            </h5>
+            <p class="mb-3 text-xl text-gray-700 dark:text-white font-bold">
+              10
+            </p>
           </div>
         </div>
-        <!-- 
+        <div
+          class="flex flex-col items-center bg-[#AD7866] border border-gray-200 rounded-lg shadow-sm md:flex-row md:max-w-xl">
+          <div>
+            <svg class="w-24 h-24 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+              width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd"
+                d="M5.024 3.783A1 1 0 0 1 6 3h12a1 1 0 0 1 .976.783L20.802 12h-4.244a1.99 1.99 0 0 0-1.824 1.205 2.978 2.978 0 0 1-5.468 0A1.991 1.991 0 0 0 7.442 12H3.198l1.826-8.217ZM3 14v5a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5h-4.43a4.978 4.978 0 0 1-9.14 0H3Zm5-7a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1Zm0 2a1 1 0 0 0 0 2h8a1 1 0 1 0 0-2H8Z"
+                clip-rule="evenodd" />
+            </svg>
+          </div>
+          <div class="flex flex-col justify-between p-4 leading-normal">
+            <h5 class="mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">
+              Buku Kembali Hari Ini
+            </h5>
+            <p class="mb-3 text-xl text-gray-700 dark:text-white font-bold">
+              10
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-start mb-4 rounded-sm bg-[#AD7866]">
+        <div class="w-full bg-[#AD7866] rounded-lg shadow-sm p-4 md:p-6">
+          <div class="flex justify-between border-gray-200 border-b dark:border-gray-700 pb-3">
+            <dl>
+              <dt class="text-base font-normal text-white pb-1">
+                Peminjaman
+              </dt>
+              <dd class="leading-none text-3xl font-bold text-gray-900 dark:text-white">
+                100
+              </dd>
+            </dl>
+            <div>
+              <span
+                class="bg-green-100 text-green-800 text-xs font-medium inline-flex items-center px-2.5 py-1 rounded-md dark:bg-green-900 dark:text-green-300">
+                <svg class="w-2.5 h-2.5 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                  viewBox="0 0 10 14">
+                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M5 13V1m0 0L1 5m4-4 4 4" />
+                </svg>
+                Rating Peminjaman 23.5%
+              </span>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 py-3">
+            <dl>
+              <dt class="text-base font-normal text-white pb-1">
+                Peminjaman
+              </dt>
+              <dd class="leading-none text-xl font-bold text-green-500 dark:text-green-400">
+                50
+              </dd>
+            </dl>
+            <dl>
+              <dt class="text-base font-normal text-white pb-1">
+                Pengembalian
+              </dt>
+              <dd class="leading-none text-xl font-bold text-red-600 dark:text-red-500">
+                50
+              </dd>
+            </dl>
+          </div>
+
+          <div id="bar-chart"></div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-start mb-4 rounded-sm bg-[#AD7866]">
+        <div class="container mx-auto p-4">
+          <h1 class="text-3xl font-bold mb-4 text-center text-gray-50">
+            Leaderboard Buku Terlaris
+          </h1>
+          <table class="w-full text-gray-50 bg-[#AD7866] shadow-md rounded-lg">
+            <thead>
+              <tr class="border-b border-gray-200">
+                <th class="py-2 px-4 text-left">Peringkat</th>
+                <th class="py-2 px-4 text-left">Judul Buku</th>
+                <th class="py-2 px-4 text-left">Penulis</th>
+                <th class="py-2 px-4 text-left">Jumlah Peminjaman</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-gray-200">
+                <td class="py-2 px-4">1</td>
+                <td class="py-2 px-4">Laskar Pelangi</td>
+                <td class="py-2 px-4">Andrea Hirata</td>
+                <td class="py-2 px-4">150</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-2 px-4">2</td>
+                <td class="py-2 px-4">Bumi Manusia</td>
+                <td class="py-2 px-4">Pramoedya Ananta Toer</td>
+                <td class="py-2 px-4">120</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-2 px-4">3</td>
+                <td class="py-2 px-4">Negeri 5 Menara</td>
+                <td class="py-2 px-4">Ahmad Fuadi</td>
+                <td class="py-2 px-4">100</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-2 px-4">4</td>
+                <td class="py-2 px-4">Ayat-Ayat Cinta</td>
+                <td class="py-2 px-4">Habiburrahman El Shirazy</td>
+                <td class="py-2 px-4">90</td>
+              </tr>
+              <tr class="border-b border-gray-200">
+                <td class="py-2 px-4">5</td>
+                <td class="py-2 px-4">Perahu Kertas</td>
+                <td class="py-2 px-4">Dewi Lestari</td>
+                <td class="py-2 px-4">80</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- 
         <div class="grid grid-cols-2 gap-4 mb-4">
           <div
             class="flex items-center justify-center rounded-sm bg-gray-50 h-28 dark:bg-gray-800"
@@ -440,11 +472,19 @@
             </p>
           </div>
         </div> -->
-      </div>
     </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.46.0/dist/apexcharts.min.js"></script>
-    <script src="/assets/js/script.js"></script>
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.46.0/dist/apexcharts.min.js"></script>
+  <script src="/assets/js/script.js"></script>
+  <script>
+  document.getElementById('toggle-sidebar').addEventListener('click', function () {
+    const sidebar = document.getElementById('sidebar-custom');
+    sidebar.classList.toggle('-translate-x-full');
+    sidebar.classList.toggle('translate-x-0');
+  });
+</script>
+</body>
+
 </html>

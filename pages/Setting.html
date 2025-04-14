@@ -1,0 +1,65 @@
+<!-- sidebar_toggle.html -->
+<!-- Bilah Navigasi dengan Ikon Toggle -->
+<div id="nav-custom" class="fixed top-0 left-0 w-full bg-gray-800 text-white p-4 flex justify-between items-center z-50">
+    <div class="text-2xl font-bold">E-Library</div>
+    <button id="toggle-sidebar" class="focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+      </svg>
+    </button>
+  </div>
+  
+  <!-- Sidebar -->
+  <div id="sidebar-custom"
+    class="fixed top-16 left-0 w-64 h-full bg-gray-800 text-white transform -translate-x-full transition-transform duration-300 md:translate-x-0">
+    <div class="p-4 text-2xl font-bold">E-Library</div>
+    <nav class="flex-1">
+      <ul>
+        <li class="px-4 py-2 hover:bg-gray-700 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M3 10h11M9 21V3m4 18h8m-4-4v4m0-10v4" />
+          </svg>
+          Dashboard
+        </li>
+        <li class="px-4 py-2 hover:bg-gray-700 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+          Koleksi Buku
+        </li>
+        <li class="px-4 py-2 hover:bg-gray-700 flex items-center">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          Pengaturan
+        </li>
+      </ul>
+    </nav>
+  </div>
+  
+  <!-- CSS untuk Sidebar -->
+  <style>
+    @media (max-width: 767px) {
+      #sidebar-custom.translate-x-0~.p-4 {
+        margin-left: 0;
+      }
+    }
+  
+    @media (min-width: 768px) {
+      #sidebar-custom {
+        transform: translateX(0) !important;
+      }
+    }
+  </style>
+  
+  <!-- JavaScript untuk Toggle -->
+  <script>
+    document.getElementById('toggle-sidebar').addEventListener('click', function () {
+      const sidebar = document.getElementById('sidebar-custom');
+      sidebar.classList.toggle('-translate-x-full');
+      sidebar.classList.toggle('translate-x-0');
+    });
+  </script>
