@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Floating Contact Button</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    .floating-contact {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    .contact-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #007bff;
+      color: white;
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .contact-button:hover {
+      background-color: #0056b3;
+      transform: scale(1.1);
+    }
+    .contact-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    @media (max-width: 768px) {
+      .floating-contact {
+        bottom: 10px;
+        right: 10px;
+      }
+      .contact-button {
+        width: 40px;
+        height: 40px;
+      }
+      .contact-button i {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="floating-contact">
+    <a href="whatsapp.html" class="contact-button">
+        <img src="IkonContact.png" alt="Contact Icon">
+    </a>
+  </div>
+  <script>
+    document.querySelector('.contact-button').addEventListener('click', function(event) {
+      event.preventDefault();
+      alert('Silakan hubungi kami melalui halaman Kontak.');
+      window.location.href = 'whatsapp.html';
+    });
+  </script>
+</body>
+</html>
